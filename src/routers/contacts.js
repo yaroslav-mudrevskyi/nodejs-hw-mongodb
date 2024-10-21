@@ -18,11 +18,13 @@ contactsRouter.post('/', ctrlWrapper(contactControllers.addContactController));
 
 contactsRouter.patch(
   '/:contactId',
+  isValidId,
   ctrlWrapper(contactControllers.updateContactController),
 );
 
 contactsRouter.delete(
   '/:contactId',
+  isValidId,
   ctrlWrapper(contactControllers.deleteContactController),
 );
 
