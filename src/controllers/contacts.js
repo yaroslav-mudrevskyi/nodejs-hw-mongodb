@@ -43,7 +43,7 @@ export const updateContactController = async (req, res) => {
   const result = await contactServices.updateContactById(contactId, req.body);
 
   if (!result) {
-    throw createHttpError(404, `Movie with id=${contactId} not found`);
+    throw createHttpError(404, `Contact with id=${contactId} not found`);
   }
 
   res.status(200).json({
