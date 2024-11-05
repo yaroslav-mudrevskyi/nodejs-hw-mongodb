@@ -26,7 +26,7 @@ export const getContacts = async ({
 
   console.log(contacts);
 
-  const paginationData = calcPaginationData({ count, page, perPage: limit });
+  const paginationData = calcPaginationData({ count, page, perPage });
 
   return {
     data: contacts,
